@@ -1,0 +1,70 @@
+:root {
+ font-family: 'JetBrains Mono', monospace;
+ font-weight:  500;
+ font-size: 16px;
+ --text: #f1e2e5;
+ --background: #100608;
+ --primary: #e18896;
+ --secondary: #8d1629;
+ --accent: #ef3150;
+ --transition-speed: 200ms;
+}
+
+body {
+ display: flex;
+ margin:0;
+ border:0;
+ background-color: var(--background);
+ overflow-x: hidden;
+ align-items: flex-start;
+}
+
+.title {
+ position: absolute;
+ left: 50%;
+ font-weight: 700;
+ top: 10%;
+ color: var(--text);
+ transform: translateX(-50%);
+ font-size: 5em;
+ white-space: nowrap;
+}
+
+.navbar {
+ position: fixed;
+ height: 100vh;
+ width: 2%;
+ z-index: 1;
+ background-color: var(--primary);
+ transition: var(--transition-speed);
+}
+.navbar:hover {
+ width: 12%;
+ .homelink {
+  opacity: 100%;
+ }
+ .library {
+  opacity: 100%;
+ }
+}
+ul {
+ list-style-type: none;
+ padding: 0%;
+ margin: 0%;
+}
+.homelink {
+ position: absolute;
+ opacity: 0%;
+ left: 60px;
+ text-decoration: none;
+ color: var(--text);
+ font-size: 3em;
+}
+.library {
+ position: absolute;
+ opacity: 0%;
+ left: 60px;
+ text-decoration: none;
+ color: var(--text);
+ font-size: 3em;
+}

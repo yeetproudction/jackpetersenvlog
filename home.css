@@ -1,0 +1,177 @@
+:root {
+ font-family: 'JetBrains Mono', monospace;
+ font-weight:  500;
+ font-size: 16px;
+ --text: #f1e2e5;
+ --background: #100608;
+ --primary: #e18896;
+ --secondary: #8d1629;
+ --accent: #ef3150;
+ --transition-speed: 200ms;
+}
+
+body {
+ display: flex;
+ margin:0;
+ border:0;
+ background-color: var(--background);
+ overflow-x: hidden;
+ align-items: flex-start;
+}
+
+.navbar {
+ position: fixed;
+ height: 100vh;
+ width: 2%;
+ z-index: 1;
+ background-color: var(--primary);
+ transition: var(--transition-speed);
+}
+.navbar:hover {
+ width: 11%;
+ .homelink {
+  opacity: 100%;
+ }
+ .library {
+  opacity: 100%;
+ }
+}
+
+footer {
+ position: absolute;
+ top: 200%;
+ height: 100px;
+ width: 100vw;
+ background-color: var(--accent);
+}
+ul {
+ list-style-type: none;
+ padding: 0%;
+ margin: 0%;
+}
+
+.homelink {
+ position: absolute;
+ opacity: 0%;
+ left: 60px;
+ text-decoration: none;
+ color: var(--text);
+ font-size: 3em;
+}
+
+.title {
+ position: absolute;
+ left: 35%;
+ font-weight: 700;
+ top: 10%;
+ color: var(--text);
+ transform: translateX(-65%);
+ font-size: 5em;
+ white-space: nowrap;
+}
+.subtitle {
+ position: absolute;
+ margin-left: 35%;
+ left: 40%;
+ font-size: 700;
+ transform: translateX(-60%);
+ top: 15%;
+ color: var(--text);
+ font-size: 3em;
+ white-space: wrap;
+ background-color: var(--accent);
+ height: calc(auto + 2.5%);
+ width: calc(auto + 2.5%);
+ border-radius: 50px;
+ padding: 25px;
+ box-shadow: -10px 20px var(--primary), -20px 35px var(--text);
+}
+
+.subtitle {
+ animation: cards 5s linear 3s infinite alternate;
+}
+
+@keyframes cards {
+ 0% {
+  background-color: var(--accent);
+  box-shadow: -10px 20px var(--primary), -20px 35px var(--text);
+  content: 'please read an article, we`ve got plenty to pick from.';
+ }
+ 
+ 100% {
+  background-color: var(--primary);
+  box-shadow: -10px 20px var(--text), -20px 35px var(--accent);
+  content: 'We`ve got many topic such as 3d printing, programming, and more';
+ }
+}
+
+.articles {
+ position: relative;
+ top: -150%;
+ color: var(--text);
+ font-size: 5em;
+ white-space: nowrap;
+}
+
+.article-container {
+ position: absolute;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ top: 100%;
+ gap: 20px;
+ padding: 5%;
+ transform: rotateZ(5deg);
+ background-color: var(--accent);
+ height: 200px;
+ width: 100%;
+}
+
+.article-card {
+ position: relative;
+ height: 370px;
+ width: 320px;
+ border-radius: 50px;
+ background-color: var(--accent);
+ filter: brightness(1.2);
+ flex-shrink: 1 0 auto;
+ min-width: 320px;
+ transition: var(--transition-speed);
+}
+
+.arrow {
+ position: absolute;
+ z-index: 1;
+ top:100%;
+ all: unset;
+ text-align: center;
+ vertical-align: middle;
+ font-size: 5em;
+ font-weight: 700;
+ color: var(--text);
+ height: 100px;
+ width: 100px;
+ border-radius: 50px;
+ background-color: var(--primary);
+ flex: 1;
+ transform: rotateZ(-5deg);
+}
+
+.arrow-left {
+ position: absolute;
+ left: 85%;
+ transform: translateY(-20%);
+ z-index: 1;
+}
+.arrow-right {
+ position: absolute;
+ z-index: 1;
+}
+.library {
+ position: absolute;
+ opacity: 0%;
+ left: 60px;
+ text-decoration: none;
+ color: var(--text);
+ font-size: 3em;
+}
